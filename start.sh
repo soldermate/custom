@@ -4,4 +4,4 @@
 # User: admin
 # Password : admin
 
-./odoo/odoo-bin --addons-path=./addons,/.custom_addons -u cad -d default
+./odoo/odoo-bin --addons-path=./odoo/addons,./custom_addons -u cad -d default
