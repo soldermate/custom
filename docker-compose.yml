@@ -1,13 +1,17 @@
 version: '3.9'
+
 services:
+
   web:
-    image: odoo:17.0
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+
     depends_on:
       - db
     ports:
       - "8069:8069"
-    volumes:
-      - ./addons:/mnt/extra-addons
+
   db:
     image: postgres:15
     environment:
