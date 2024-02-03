@@ -1,10 +1,8 @@
 
 {
-    'name': 'CAD',
+    'name': 'KiCAD',
     'version': '0.1',
     'depends':  [
-        'base_setup',
-        'product',
     ],
 
     'installable': True,
