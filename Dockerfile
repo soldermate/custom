@@ -1,4 +1,4 @@
 FROM mcr.microsoft.com/devcontainers/base:jammy
-RUN apt-get update \
-&& apt-get install python3 postgresql-client
+RUN apt-get update --fix-missing \
+&& apt-get install python3
 
