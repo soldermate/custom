@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="kicad_view_tree">
+      <field name="name">kicad.view.tree</field>
+      <field name="model">kicad.symbol</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="kicad_action_window">
+      <field name="name">Symbol</field>
+      <field name="res_model">kicad.symbol</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="custom_addons/test.action_server">
+      <field name="name">custom_addons/test server</field>
+      <field name="model_id" ref="model_custom_addons/test_custom_addons/test"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="KiCad" id="kicad_menu_root"/>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="custom_addons/test.menu_1" parent="custom_addons/test.menu_root"/>
+    <menuitem name="Menu 2" id="custom_addons/test.menu_2" parent="custom_addons/test.menu_root"/>
+-->
+    <!-- actions -->
+
+    <menuitem name="Symbols" id="Symbols" parent="kicad_menu_root"
+              action="kicad_action_window"/>
+  </data>
+</odoo>
+ 
